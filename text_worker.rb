@@ -20,7 +20,7 @@ class TextWorker
   end
 
   def change_values
-    @array.gsub!(/[^A-Za-z]/, '')
+    @array.gsub!(/[^а-яА-ЯіІїЇ ]/, '')
   end
 
 
