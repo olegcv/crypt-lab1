@@ -28,7 +28,7 @@ def get_pair_letters
   f = File.open('result.txt', 'w+')
   result_hash.each do |key, value|
     result_hash[key] = value.to_f / sum
-    f.write("#{key} : #{result_hash[key]}\n")
+    f.write("#{key}     #{result_hash[key]}\n")
   end
 end
 
