@@ -28,8 +28,13 @@ def get_pair_letters
   f = File.open('result.txt', 'w+')
   result_hash.each do |key, value|
     result_hash[key] = value.to_f / sum
-    f.write("#{key}     #{result_hash[key]}\n")
+    result = "%10s" % key + "%10d " % value + " %5f \n" % Math.log2(value).round(5)
+    f.write(result)
   end
+
+  #result_hash.sort_by(&:last).each{|value| puts "#{value.first} : #{value.last}" }
 end
 
+#get_single_letters
 get_pair_letters
+

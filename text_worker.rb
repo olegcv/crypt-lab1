@@ -23,5 +23,4 @@ class TextWorker
     @array.gsub!(/[^а-яА-ЯіІїЇєЄҐґ ]/, '')
   end
 
-
 end
